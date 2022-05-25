@@ -52,4 +52,4 @@ const Viewfaculty = () => {
   )
 }
 
-export default Viewfaculty
+export default Viewfaculty 
