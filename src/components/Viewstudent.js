@@ -29,10 +29,10 @@ const Viewstudent = () => {
   <tbody>
   {viewstudent.map((value,key)=>{
      return <tr>
-      <th scope={value.admission_number}>1</th>
+      <th scope="row">{value.admission_number}</th>
       <td>{value.rollno}</td>
       <td>{value.name}</td>
-      <td>{value.class}</td>
+      <td>{value.classname}</td>
       <td>{value.parent}</td>
       <td>{value.phn_no}</td>
       <td>{value.address}</td>
