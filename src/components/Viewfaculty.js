@@ -30,13 +30,13 @@ const Viewfaculty = () => {
   <tbody>
   {viewfaculty.map((value,key)=>{
      return <tr>
-      <th scope="row">{value.name}</th>
-      <td>{value.mobile}</td>
-      <td>{value.education}</td>
-      <td>{value.address}</td>
-      <td>{value.pincode}</td>
-      <td>{value.district}</td>
-     
+      <th scope="row">{value.Name}</th>
+      <td>{value.Mobile}</td>
+      <td>{value.Education}</td>
+      <td>{value.Address}</td>
+      <td>{value.Pincode}</td>
+      <td>{value.District}</td>
+    
     </tr>
   })}
     
