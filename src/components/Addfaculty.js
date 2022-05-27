@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import Header from './Header'
 
@@ -10,8 +11,19 @@ const Addfaculty = () => {
   var [district,setDistrict]=useState("")
 
   const registerFaculty=(()=>{
-   const data={"name":name,"mobile":mobile,"education":education,"address":address,"pincode":pincode,"district":district}
-   console.log(data)
+   const details={"Name":name,"Mobile":mobile,"Education":education,"Address":address,"Pincode":pincode,"District":district}
+
+   axios.post("http://localhost:5000/api/addfaculty",details).then((response)=>{
+console.log(response.details)
+if(response.details.status=="success")
+{
+    alert("data inserted successfully")
+}
+else
+{
+    alert("insertion failed")
+}
+   })
   })
   return (
     <div>
