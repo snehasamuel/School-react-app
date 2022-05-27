@@ -14,8 +14,8 @@ const Addfaculty = () => {
    const details={"Name":name,"Mobile":mobile,"Education":education,"Address":address,"Pincode":pincode,"District":district}
 
    axios.post("http://localhost:5000/api/addfaculty",details).then((response)=>{
-console.log(response.details)
-if(response.details.status=="success")
+console.log(response.data)
+if(response.data.status=="success")
 {
     alert("data inserted successfully")
 }
