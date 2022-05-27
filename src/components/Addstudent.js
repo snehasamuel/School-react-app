@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import Header from './Header'
 
@@ -11,8 +12,19 @@ const Addstudent = () => {
    var [address,setAddress]=useState("")
 
 const registerStudent=(()=>{
-  const details={"admission_number":admsn,"rollno":rollno,"name":name,"classname":classes,"parent":parent,"phn_no":phone,"address":address}
-  console.log(details)
+  const data={"Admissionno":admsn,"Rollno":rollno,"Name":name,"Class":classes,"Parent":parent,"Phone":phone,"Address":address}
+ axios.post("http://localhost:5000/api/addstudent",data).then((response)=>{
+console.log(response.data)
+if(response.data.status=="success")
+{
+    alert("successfully inserted")
+}
+else
+{
+    alert("insertion failed")
+}
+
+ })
 })
 
   return (
